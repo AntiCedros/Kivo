@@ -11,7 +11,9 @@ SOURCES += \
         main.cpp
 
 TRANSLATIONS += \
-    Kivo_de_DE.ts
+    Kivo_de.ts \
+    Kivo_en.ts \
+    Kivo_eo.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 
