@@ -21,7 +21,7 @@ void KivoCMD::run()
 
     if (parser.isSet("s")) {
         QTextStream out(stdout);
-        out << app->translate("cmd", "Showing recipe '") + parser.value("s") + "'" << endl;
+        out << app->translate("cmd", "Showing recipe ") + "'" + parser.value("s") + "'" << Qt::endl;
     }
 
     quit();
