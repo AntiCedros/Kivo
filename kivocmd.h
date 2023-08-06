@@ -4,6 +4,7 @@
 #include <QCommandLineParser>
 #include <QCoreApplication>
 #include <QObject>
+#include <QTextStream>
 
 using namespace std;
 
