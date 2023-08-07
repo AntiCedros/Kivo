@@ -10,16 +10,22 @@ void KivoCMD::run() {
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addOptions({
-        {{"s", "show-recipe"},
-         app->translate("cmd", "Prints the recipe with <title>"),
-         app->translate("cmd", "title")},
+        {{"s", "show-recipe"}, app->translate("cmd", "Prints the recipe with <title>"), app->translate("cmd", "title")},
+        {"create-ingredient", app->translate("cmd", "Creates new ingredient with <name>"), app->translate("cmd", "name")},
     });
 
     parser.process(app->arguments());
 
+    QTextStream out(stdout);
     if (parser.isSet("s")) {
-        QTextStream out(stdout);
         out << app->translate("cmd", "Showing recipe ") + "'" + parser.value("s") + "'" << Qt::endl;
+    }
+    if (parser.isSet("create-ingredient")) {
+        if (Database::addIngredient(parser.value("create-ingredient"))) {
+            out << app->translate("cmd", "Ingredient creation successful") << Qt::endl;
+        } else {
+            qWarning() << app->translate("cmd", "Ingredient creation failed");
+        }
     }
 
     quit();

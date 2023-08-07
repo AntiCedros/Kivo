@@ -19,7 +19,7 @@ Database::Database() {
 
             QSqlQuery sqlQuery(query);
             if (!sqlQuery.exec()) {
-                qDebug() << "Error";
+                qCritical() << "Error during initial database creation; last query was: " << sqlQuery.lastQuery();
             }
         }
     } else {
@@ -28,3 +28,10 @@ Database::Database() {
 }
 
 Database::~Database() { db.close(); }
+
+bool Database::addIngredient(QString name) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO Ingredients (IngredientName) VALUES (:name)");
+    query.bindValue(":name", name);
+    return query.exec();
+}

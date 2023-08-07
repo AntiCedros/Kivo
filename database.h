@@ -14,6 +14,7 @@ class Database {
 public:
     Database();
     ~Database();
+    static bool addIngredient(QString name);
 
 private:
     QSqlDatabase db;

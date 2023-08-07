@@ -1,6 +1,7 @@
 #ifndef KIVOCMD_H
 #define KIVOCMD_H
 
+#include "database.h"
 #include <QCommandLineParser>
 #include <QCoreApplication>
 #include <QObject>
