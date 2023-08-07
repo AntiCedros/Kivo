@@ -34,10 +34,24 @@ void KivoCMD::run() {
         }
     }
     if (parser.isSet("show-ingredient")) {
-        out << app->translate("cmd/show-ingredient", "Showing recipe '") + parser.value("show-ingredient") + app->translate("cmd/show-ingredient", "'") << Qt::endl;
+        QString* ingredient = Database::getIngredient(parser.value("show-ingredient"));
+        if (!ingredient[0].contains("-1")) {
+            out << app->translate("cmd/show-ingredient", "Showing ingredient '") + parser.value("show-ingredient") + app->translate("cmd/show-ingredient", "':") << Qt::endl;
+            out << app->translate("cmd/show-ingredient", "    ID:   \t") << ingredient[0] << Qt::endl;
+            out << app->translate("cmd/show-ingredient", "    Title:\t") << ingredient[1] << Qt::endl;
+        } else {
+            out << app->translate("cmd/show-ingredient", "Ingredient with name '") + parser.value("show-ingredient") + app->translate("cmd/show-ingredient", "' not found") << Qt::endl;
+        }
     }
     if (parser.isSet("show-recipe")) {
-        out << app->translate("cmd/show-recipe", "Showing recipe '") + parser.value("show-recipe") + app->translate("cmd/show-recipe", "'") << Qt::endl;
+        QString* recipe = Database::getRecipe(parser.value("show-recipe"));
+        if (!recipe[0].contains("-1")) {
+            out << app->translate("cmd/show-recipe", "Showing recipe '") + parser.value("show-recipe") + app->translate("cmd/show-recipe", "':") << Qt::endl;
+            out << app->translate("cmd/show-recipe", "    ID:   \t") << recipe[0] << Qt::endl;
+            out << app->translate("cmd/show-recipe", "    Title:\t") << recipe[1] << Qt::endl;
+        } else {
+            out << app->translate("cmd/show-recipe", "Recipe with title '") + parser.value("show-recipe") + app->translate("cmd/show-recipe", "' not found") << Qt::endl;
+        }
     }
 
     quit();

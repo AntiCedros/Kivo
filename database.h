@@ -16,6 +16,8 @@ public:
     ~Database();
     static bool addIngredient(QString name);
     static bool addRecipe(QString name);
+    static QString* getIngredient(QString name);
+    static QString* getRecipe(QString name);
 
 private:
     QSqlDatabase db;

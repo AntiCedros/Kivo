@@ -42,3 +42,31 @@ bool Database::addRecipe(QString name) {
     query.bindValue(":name", name);
     return query.exec();
 }
+
+QString* Database::getIngredient(QString name) {
+    QSqlQuery query;
+    query.prepare("SELECT * FROM Ingredients WHERE IngredientName=(:name)");
+    query.bindValue(":name", name);
+    query.exec();
+    if (query.first()) {
+        QString* ingredient = new QString[]{query.value(0).toString(), query.value(1).toString()};
+        return ingredient;
+    } else {
+        QString* noIngredient = new QString[]{"-1"};
+        return noIngredient;
+    }
+}
+
+QString* Database::getRecipe(QString name) {
+    QSqlQuery query;
+    query.prepare("SELECT * FROM Recipes WHERE RecipeName=(:name)");
+    query.bindValue(":name", name);
+    query.exec();
+    if (query.first()) {
+        QString* recipe = new QString[]{query.value(0).toString(), query.value(1).toString()};
+        return recipe;
+    } else {
+        QString* noRecipe = new QString[]{"-1"};
+        return noRecipe;
+    }
+}
