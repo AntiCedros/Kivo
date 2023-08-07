@@ -35,3 +35,10 @@ bool Database::addIngredient(QString name) {
     query.bindValue(":name", name);
     return query.exec();
 }
+
+bool Database::addRecipe(QString name) {
+    QSqlQuery query;
+    query.prepare("INSERT INTO Recipes (RecipeName) VALUES (:name)");
+    query.bindValue(":name", name);
+    return query.exec();
+}
