@@ -6,17 +6,17 @@
     <message>
         <location filename="kivocmd.cpp" line="16"/>
         <source>Prints the recipe with &lt;title&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeigt das Rezept mit &lt;Titel&gt;</translation>
     </message>
     <message>
         <location filename="kivocmd.cpp" line="17"/>
         <source>title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel</translation>
     </message>
     <message>
         <location filename="kivocmd.cpp" line="24"/>
         <source>Showing recipe </source>
-        <translation type="unfinished"></translation>
+        <translation>Zeige Rezept </translation>
     </message>
 </context>
 </TS>

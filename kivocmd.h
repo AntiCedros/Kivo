@@ -13,10 +13,10 @@ class KivoCMD : public QObject
     Q_OBJECT
 
 private:
-    QCoreApplication *app;
+    QCoreApplication* app;
 
 public:
-    explicit KivoCMD(QObject *parent = 0);
+    explicit KivoCMD(QObject* parent = 0);
     void quit();
 
 signals:

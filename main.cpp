@@ -1,11 +1,11 @@
+#include "database.h"
+#include "kivocmd.h"
 #include <QCoreApplication>
 #include <QLocale>
 #include <QTimer>
 #include <QTranslator>
-#include "kivocmd.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char* argv[]) {
     QCoreApplication app(argc, argv);
 
     QCoreApplication::setApplicationName("Kivo");
@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
         }
     }
 
+    Database kivoDB;
     KivoCMD kivoCMD;
 
     QObject::connect(&kivoCMD, SIGNAL(finished()), &app, SLOT(quit()));
