@@ -5,127 +5,129 @@
     <name>cmd</name>
     <message>
         <location filename="kivocmd.cpp" line="13"/>
-        <source>Prints the recipe with &lt;title&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="kivocmd.cpp" line="13"/>
-        <source>title</source>
-        <translation type="unfinished"></translation>
+        <source>Prints the recipe with title &lt;T&gt;</source>
+        <oldsource>Prints the recipe with &lt;title&gt;</oldsource>
+        <translation>Prints the recipe with title &lt;T&gt;</translation>
     </message>
     <message>
         <location filename="kivocmd.cpp" line="14"/>
-        <source>Prints the ingredient with &lt;name&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="kivocmd.cpp" line="20"/>
+        <source>T</source>
+        <translation>T</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="15"/>
-        <source>Creates new recipe with &lt;name&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="kivocmd.cpp" line="17"/>
+        <location filename="kivocmd.cpp" line="23"/>
+        <source>N</source>
+        <translation>N</translation>
+    </message>
+    <message>
+        <location filename="kivocmd.cpp" line="19"/>
+        <source>Creates new recipe with title &lt;T&gt;</source>
+        <translation>Creates new recipe with title &lt;T&gt;</translation>
+    </message>
+    <message>
+        <location filename="kivocmd.cpp" line="22"/>
+        <source>Creates new ingredient with name &lt;N&gt;</source>
+        <translation>Creates new ingredient with name &lt;N&gt;</translation>
     </message>
     <message>
         <location filename="kivocmd.cpp" line="16"/>
-        <source>Creates new ingredient with &lt;name&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="kivocmd.cpp" line="14"/>
-        <location filename="kivocmd.cpp" line="15"/>
-        <location filename="kivocmd.cpp" line="16"/>
-        <source>name</source>
-        <translation type="unfinished"></translation>
+        <source>Prints the ingredient with name &lt;N&gt;</source>
+        <oldsource>Creates new ingredient with &lt;name&gt;</oldsource>
+        <translation>Prints the ingredient with name &lt;N&gt;</translation>
     </message>
 </context>
 <context>
     <name>cmd/create-ingredient</name>
     <message>
-        <location filename="kivocmd.cpp" line="24"/>
+        <location filename="kivocmd.cpp" line="31"/>
         <source>Ingredient creation successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingredient creation successful</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="26"/>
+        <location filename="kivocmd.cpp" line="34"/>
         <source>Ingredient creation failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingredient creation failed</translation>
     </message>
 </context>
 <context>
     <name>cmd/create-recipe</name>
     <message>
-        <location filename="kivocmd.cpp" line="31"/>
+        <location filename="kivocmd.cpp" line="39"/>
         <source>Recipe creation successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Recipe creation successful</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="33"/>
+        <location filename="kivocmd.cpp" line="42"/>
         <source>Recipe creation failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Recipe creation failed</translation>
     </message>
 </context>
 <context>
     <name>cmd/show-ingredient</name>
     <message>
-        <location filename="kivocmd.cpp" line="39"/>
+        <location filename="kivocmd.cpp" line="48"/>
         <source>Showing ingredient &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Showing ingredient &apos;</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="39"/>
+        <location filename="kivocmd.cpp" line="50"/>
         <source>&apos;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;:</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="40"/>
+        <location filename="kivocmd.cpp" line="52"/>
         <source>    ID:   	</source>
-        <translation type="unfinished"></translation>
+        <translation>    ID:   	</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="41"/>
+        <location filename="kivocmd.cpp" line="55"/>
         <source>    Title:	</source>
-        <translation type="unfinished"></translation>
+        <translation>    Name:	</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="43"/>
+        <location filename="kivocmd.cpp" line="59"/>
         <source>Ingredient with name &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingredient with name &apos;</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="43"/>
+        <location filename="kivocmd.cpp" line="61"/>
         <source>&apos; not found</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos; not found</translation>
     </message>
 </context>
 <context>
     <name>cmd/show-recipe</name>
     <message>
-        <location filename="kivocmd.cpp" line="49"/>
+        <location filename="kivocmd.cpp" line="68"/>
         <source>Showing recipe &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Showing recipe &apos;</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="49"/>
+        <location filename="kivocmd.cpp" line="70"/>
         <source>&apos;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;:</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="50"/>
+        <location filename="kivocmd.cpp" line="72"/>
         <source>    ID:   	</source>
-        <translation type="unfinished"></translation>
+        <translation>    ID:   	</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="51"/>
+        <location filename="kivocmd.cpp" line="75"/>
         <source>    Title:	</source>
-        <translation type="unfinished"></translation>
+        <translation>    Title:	</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="53"/>
+        <location filename="kivocmd.cpp" line="79"/>
         <source>Recipe with title &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Recipe with title &apos;</translation>
     </message>
     <message>
-        <location filename="kivocmd.cpp" line="53"/>
+        <location filename="kivocmd.cpp" line="81"/>
         <source>&apos; not found</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos; not found</translation>
     </message>
 </context>
 </TS>

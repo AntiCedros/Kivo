@@ -19,7 +19,8 @@ Database::Database() {
 
             QSqlQuery sqlQuery(query);
             if (!sqlQuery.exec()) {
-                qCritical() << "Error during initial database creation; last query was: " << sqlQuery.lastQuery();
+                qCritical() << "Error during initial database creation; last query was: "
+                            << sqlQuery.lastQuery();
             }
         }
     } else {
@@ -27,7 +28,9 @@ Database::Database() {
     }
 }
 
-Database::~Database() { db.close(); }
+Database::~Database() {
+    db.close();
+}
 
 bool Database::addIngredient(QString name) {
     QSqlQuery query;
@@ -49,10 +52,15 @@ QString* Database::getIngredient(QString name) {
     query.bindValue(":name", name);
     query.exec();
     if (query.first()) {
-        QString* ingredient = new QString[]{query.value(0).toString(), query.value(1).toString()};
+        QString* ingredient = new QString[]{
+            query.value(0).toString(),
+            query.value(1).toString()
+        };
         return ingredient;
     } else {
-        QString* noIngredient = new QString[]{"-1"};
+        QString* noIngredient = new QString[]{
+            "-1"
+        };
         return noIngredient;
     }
 }
@@ -63,10 +71,15 @@ QString* Database::getRecipe(QString name) {
     query.bindValue(":name", name);
     query.exec();
     if (query.first()) {
-        QString* recipe = new QString[]{query.value(0).toString(), query.value(1).toString()};
+        QString* recipe = new QString[]{
+            query.value(0).toString(),
+            query.value(1).toString()
+        };
         return recipe;
     } else {
-        QString* noRecipe = new QString[]{"-1"};
+        QString* noRecipe = new QString[]{
+            "-1"
+        };
         return noRecipe;
     }
 }

@@ -9,8 +9,7 @@
 
 using namespace std;
 
-class KivoCMD : public QObject
-{
+class KivoCMD : public QObject {
     Q_OBJECT
 
 private:

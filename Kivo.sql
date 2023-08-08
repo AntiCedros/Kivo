@@ -28,4 +28,3 @@ CREATE TABLE IF NOT EXISTS "Localization_Ingredient_Info" (
 	FOREIGN KEY("LocaleID") REFERENCES "Locales"("LocaleID")
 );
 DELETE FROM sqlite_sequence;
-COMMIT;
