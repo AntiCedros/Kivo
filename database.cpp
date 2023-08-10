@@ -39,10 +39,10 @@ bool Database::addIngredient(QString name) {
     return query.exec();
 }
 
-bool Database::addRecipe(QString name) {
+bool Database::addRecipe(QString title) {
     QSqlQuery query;
-    query.prepare("INSERT INTO Recipes (RecipeName) VALUES (:name)");
-    query.bindValue(":name", name);
+    query.prepare("INSERT INTO Recipes (RecipeName) VALUES (:title)");
+    query.bindValue(":title", title);
     return query.exec();
 }
 
@@ -65,10 +65,10 @@ QString* Database::getIngredient(QString name) {
     }
 }
 
-QString* Database::getRecipe(QString name) {
+QString* Database::getRecipe(QString title) {
     QSqlQuery query;
-    query.prepare("SELECT * FROM Recipes WHERE RecipeName=(:name)");
-    query.bindValue(":name", name);
+    query.prepare("SELECT * FROM Recipes WHERE RecipeName=(:title)");
+    query.bindValue(":title", title);
     query.exec();
     if (query.first()) {
         QString* recipe = new QString[]{

@@ -74,7 +74,11 @@ CMakeLists.txt.user*
 
 # KDevelop files
 *.kdev4
-build/*
+/build/*
 
 # Kate
 *.kate-swp
+
+# Doxygen documentation
+/html/*
+/latex/*
